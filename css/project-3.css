@@ -11,6 +11,7 @@ background-color: rgb(211, 215, 222);
 
 h1{
 margin: 0px;
+max-width: 100%;
 }
 
 textarea{
@@ -63,8 +64,8 @@ border-bottom: 3px solid grey;
 .intro 
 p{
 color: rgba(161, 161, 166, 0.8);
-
 }
+
 .intro h2{
 color: #53bab3;
 }
@@ -74,14 +75,20 @@ border: none;
 }
 
 .col1{
-border-bottom: 3px solid black;
-
+     width: 95%;
+   padding-left: 0.5em;
+   padding-right: 0.5em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid grey;
+    box-shadow: 3px 3px 20px black;
 }
 
-.col1
-h2{
+.col1 legend{
+font-size: 2em;
 color: #53bab3;
-padding-left: 10px;
+padding: 10px 0 15px 10px;
 }
 
 .col1, input{
@@ -92,8 +99,14 @@ background-color: white;
 margin-top: 10px;
 }
 
-.col1 label{
+.formgroup select label{
+padding-bottom: 10px;
+
+}
+
+.formgroup{
 color: rgba(189, 187, 181)	;
+padding-bottom: 30px;
 }
 
 .col1 input, label{
@@ -126,9 +139,9 @@ background: rgba(206, 219, 218, 0.3);
 height: 35px;
 }
 
-}
-input[name^="code"]{
-width: 30%;
+
+.formgroup input #zip_code{
+width: 35%;
 }
 
 .dropdown, label{
@@ -136,11 +149,8 @@ border: none;
 padding: 15px 0 20px 0;
 }
 
-.zip{
-width: 50%;
-}
 
-.dropdown select{
+.formgroup select{
 width: 200px;
 border: none;
 height: 35px;
@@ -156,7 +166,8 @@ flex-direction: column;
 
 .col2 h2, h3{
 color: #53bab3;
-padding: 10px 0 10px 0px;
+padding: 30px 0 5px 0px;
+font-size: 1.6em;
 }
 
 .col2 p{
@@ -178,14 +189,97 @@ margin-right: 15px;
 margin-left: 10px;
 }
 
+.areabutton p{
+color: rgba(161, 161, 166, 0.8);
+font-size: 1.4em;
+
+}
+
 .areabutton{
-margin: 0 auto;
+text-align: center;
 padding-top: 10px;
 }
 
+input[id="zip_code"]{
+width: 35%;
+padding-left: 10px;
+}
+
+
+
 @media(min-width: 768px){
 
+.col1 legend{
+padding: 30px 40px 50px 0px;
+	
+}
+
+.contailer{
+width: 90%;
+margin: 0 auto;
+}
+
+textarea{
+height: 300px;	
+}
+
+form{
+flex-basis: 60%;
+}
+
+fieldset{
+padding: 0;
+}
+
+.formgroup label{
+font-size: 1.3em;
+}
+
+.formgroup{
+ display: flex;
+ align-items: center;
+ margin-bottom: 30px;
+}
+
+.formgroup label{
+  flex: 0 0 146.19px;
+ margin: 0 auto 0 0;
+ padding: 0;
+}
 
 
+ .formgroup input,
+ .formgroup select {
+ margin: 0;
+ flex: 0 0 70%;
+ height: 45px;
+ justify-content: space-between;
+ }
 
+
+.areabutton{
+display: block;
+text-align: center;
+}
+
+.col2{
+padding-left: 2em;
+}
+
+.form-group{
+justify-content: space-between;
+   flex: 0 0 99.19px;
+   display: flex;
+  
+}
+}
+
+.form-group input{
+	margin-right: 33%	;
+}
+
+.form-group label{
+font-size: 1.3em;
+color: rgba(158, 151, 150, 0.9);
+}
 
